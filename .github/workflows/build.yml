@@ -24,12 +24,12 @@ jobs:
         run: npm install
 
       - name: Build
-        run: nuxt build
+        run: npm nuxt build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output
+          path: ./.output/public
 
 #  deploy:
 #    # Add a dependency to the build job
